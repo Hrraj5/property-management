@@ -32,7 +32,6 @@ public class PropertyController {
 
     @PostMapping("/save")
     public ResponseEntity<PropertyDTO> saveProperty(@RequestBody PropertyDTO prop){
-        System.out.println(prop);
         propertyService.saveProperty(prop);
         return new ResponseEntity<>(prop, HttpStatus.CREATED);
     }
